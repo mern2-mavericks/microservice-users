@@ -1,0 +1,26 @@
+### get users
+GET http://localhost:8000/api/v1/users
+
+
+### register
+POST http://localhost:8000/api/v1/users/register
+Content-Type: application/json
+
+{
+    "username": "zhang be",
+    "email": "zhang@mail.com",
+    "password": "cemangatea"
+}
+
+### login
+POST http://localhost:8000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email": "zhang@mail.com",
+    "password": "cemangatea" 
+}
+
+
+### logout
+POST http://localhost:8000/api/v1/users/logout
