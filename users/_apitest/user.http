@@ -1,5 +1,10 @@
 ### get users
-GET http://localhost:8000/api/v1/users
+GET http://localhost:8001/api/v1/users
+
+### http proxy
+GET http://localhost:3010/api/v1/users
+
+
 
 
 ### register
@@ -13,7 +18,7 @@ Content-Type: application/json
 }
 
 ### login
-POST http://localhost:8000/api/v1/users/login
+POST http://localhost:8001/api/v1/users/login
 Content-Type: application/json
 
 {
@@ -24,3 +29,6 @@ Content-Type: application/json
 
 ### logout
 POST http://localhost:8000/api/v1/users/logout
+
+### delete
+DELETE http://localhost:8000/api/v1/users/
