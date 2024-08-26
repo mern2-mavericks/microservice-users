@@ -1,2 +1,6 @@
-node_modules
 .DS_Store
+users/node_modules
+users/dist
+users/.env
+api-gateway/node_modules
+api-gateway/dist
