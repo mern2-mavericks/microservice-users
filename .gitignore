@@ -2,5 +2,6 @@
 users/node_modules
 users/dist
 users/.env
+.env
 api-gateway/node_modules
 api-gateway/dist
