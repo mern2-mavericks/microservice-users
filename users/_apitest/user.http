@@ -14,8 +14,17 @@ Content-Type: application/json
     "password": "cemangatea"
 }
 
+### register http proxy
+POST http://localhost:8001/api/v1/users/register
+Content-Type: application/json
+
+{
+    "username": "zhang be",
+    "email": "zhang@mail.com",
+    "password": "cemangatea"
+}
 ### login
-POST http://localhost:3010/
+POST http://localhost:8001/api/v1/users/login
 Content-Type: application/json
 
 {
@@ -23,9 +32,23 @@ Content-Type: application/json
     "password": "cemangatea" 
 }
 
+### login http proxy
+POST http://localhost:3010/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email": "zhang@mail.com",
+    "password": "cemangatea" 
+}
 
 ### logout
 POST http://localhost:8001/api/v1/users/logout
 
+### logout http proxy
+POST http://localhost:3010/api/v1/users/logout
+
 ### delete
 DELETE http://localhost:8001/api/v1/users/
+
+### delete http proxy
+DELETE http://localhost:3010/api/v1/users/
