@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8010:8010"
+
+  user-services:
+    build: ./users
+    ports:
+      - "8001:8001"
+    environment:
+      - MONGO-URI=mongodb://users-mongo:27017/users
+    depends_on:
+      - users-mongo
+
+  users-mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - users-mongodata:/data/db
+
+volumes:
+  users-mongodata:
