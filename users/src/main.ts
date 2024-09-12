@@ -10,15 +10,9 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
-app.use(cors({ origin: "http://localhost:3010" }));
+app.use(cors({ origin: "http://localhost:8010" }));
 app.use(middlewareCheckOrigin);
-// app.use((req, res, next) => {
-//   if (req.headers.host === "localhost:3010") {
-//     next();
-//   }
 
-//   return res.status(403).send("you not allowed access");
-// });
 connectDB();
 
 app.use(express.json());
