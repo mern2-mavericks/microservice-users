@@ -9,6 +9,6 @@ RUN npm install -g typescript
 RUN pnpm install
 RUN tsc
 
-EXPOSE 3000
+EXPOSE 8010
 
 CMD ["pnpm", "start"]
